@@ -1,15 +1,18 @@
-import React, { Component } from 'react';
-// import { BrowserRouter as Router } from 'react-router-dom';
+import React from 'react';
+import { Container } from 'react-bootstrap';
+import styled from 'styled-components';
 
 
-class Home extends Component {
+const Styles = styled.div``;
+
+export const Home = () => (
     
-    render() {
-        return(
+    <Styles>
+        <Container>
             <h2>Pizza 42!!!</h2>
-        )
-    }
-}
+        </Container>
+     </Styles>
+)
 
 
 export default Home;
