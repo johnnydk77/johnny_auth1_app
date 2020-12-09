@@ -4,13 +4,14 @@ import styled from 'styled-components';
 import pizza from '../assets/pizza.jpg';
 import LoginButtton from '../Components/LoginButton';
 import LogoutButton from '../Components/LogoutButton';
-import { Auth0Provider } from "@auth0/auth0-react";
+
+
 
 
 const Styles = styled.div`
 .home-1 {
     border: 3px solid black;
-    background-color: blue;
+    background-color: white;
     font-family: 'Padauk', sans-serif;
     height: 280px;
     bottom-border: 2px solid black;
@@ -36,6 +37,19 @@ const Styles = styled.div`
     margin:5px; 
  }
 
+ .login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   font-size: 28px;
+ }
+ .logout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    font-size: 75px;
+ }
  .contact {
     position:absolute; 
     top:20px; 
@@ -57,18 +71,19 @@ export const Home = () => (
    
     <Styles>
         <Container className='home-1'>
-             
-                <h2 className="pizza-text">Pizza 42!!!<i className="fas fa-pizza-slice"></i></h2>
+       
+                <h2 className="pizza-text">Pizza 42!!!</h2>
                 <h4 className='menu'>Menu</h4>
                 <h4 className='contact'>Contact</h4>
-                    <LoginButtton className=''/>
-                    <LogoutButton className='' />
-                    <Auth0Provider />
-        </Container>
+
+                <LoginButtton className='login' />
+                <LogoutButton className='logout' />
+      
+      
         <div className="home-2">
             <img className='pizzaImg'src={pizza} alt="pizza img" />
         </div>
-       
+        </Container>
      </Styles>
 )
 

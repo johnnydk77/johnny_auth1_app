@@ -3,14 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Auth0Provider } from '@auth0/auth0-react';
 
 
-
-
-ReactDOM.render( 
-  <App />
-,document.getElementById('root')
-);
+ReactDOM.render(
+  <Auth0Provider
+    domain="johnnydk77.us.auth0.com"
+    clientId="kR349i3sFN7z1nskH3xM5GjxeQOA4MWK"
+    redirectUri={window.location.origin}
+    audience="https://johnnydk77.us.auth0.com/api/v2/"
+    scope="read:current_user update:current_user_metadata"
+  >
+    <App />
+  </Auth0Provider>,
+  document.getElementById("root")
+); 
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
